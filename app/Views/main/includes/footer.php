@@ -1,5 +1,5 @@
 <div class = "container-fluid page-box">
-	<div class = "row">
+	<div class = "row footer">
 		<div class = "col-4">
 			<h4 align = "center title-head">Related Links</h4>
 			<ul style="list-style-type:square">
@@ -53,7 +53,7 @@
 					</div>
 					</div>
 	</div>
-		<div class = "trademark text-center text-white my-3">
+		<div class = "container-fluid trademark text-center text-white my-3">
 			<p> © 2022 Livestock Markets Kenya. All Rights Reserved | Design @<i>LivestockMarkets</i></p>
 		</div>
 	</div>

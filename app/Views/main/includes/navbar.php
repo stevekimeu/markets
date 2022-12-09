@@ -1,10 +1,9 @@
-<div class="page-content container-fluid">
 <!---------------------------------------------------------------------Top navbar--------------------------------------------------------------------------------->
-    <div class="row bg-maroon">
+<div class="page-content container-fluid">
+   <div class="row bg-nav-top">
         <div class="nav-top container">
-            <div class=" row">                
-                <!----------------------------------This is Display for all Screens--------------------------------------->
-                <div class="col-md-12 d-flex center-content-around">
+            <div class=" row">                           
+                <div class="col-md-4 d-flex center-content-around">
                 <ul class="d-block d-sm-block d-md-block nav">
                             <li class="nav-item dropdown">
                                <a class="dropdown-item" href="#" >admin@livestockmarkets.com </a>
@@ -14,18 +13,27 @@
                             <li class="nav-item dropdown">
                                <a class="dropdown-item" href="#" >0711648268</a>
                             </li>
-                    </ul>
+                    </ul> 
+                </div>
+            <div class="col-md-7 d-flex center-content-around text-white">
+                <form name = "search" action = "search.php" method = "POST">                     
+                <!-- <div class="form-group">                      -->
+                   &nbsp; <input type="text" name = "search" placeholder="Search for Livestock" style = "border:1px solid white; border-radius:5px; padding:2px; margin:2px; " >&nbsp;<input name = "submit" type="submit" Value="Search" >
+                <!-- </div>   -->
+                </form>
+            </div>                           
+            <div class="col-md-1 d-flex center-content-around">
                      <ul class="d-block d-sm-block d-md-block nav">
                             <li class="nav-item dropdown">
-                                <a class="dropdown-item" target="_blank" href="<?php echo base_url();?>markets/login" >Login</a>  
+                                <a class="dropdown-item" target="_blank" href="<?php echo base_url();?>markets/register" >Sign Up</a>  
                             </li>
                     </ul>
                     <ul class="d-block d-sm-block d-md-block nav">
                             <li class="nav-item dropdown">
-                               <a class="dropdown-item" href="<?php echo base_url();?>markets/register" >Register</a>
+                               <a class="dropdown-item" href="<?php echo base_url();?>markets/login" >Sign In</a>
                             </li>
                     </ul>                    
-                </div>
+            </div>
             </div>
         </div>
     </div>
@@ -55,23 +63,12 @@
     </div>
 </div>
 <!-----------------------Main navbar----------------------------------------------------------------------------------------------------->
-<nav class=" page-content navbar navbar-expand-md bg-black navbar-dark sticky-top">    
+<nav class=" page-content navbar navbar-expand-md bg-green navbar-dark sticky-top">    
     <div class="container ml-md-5 pl-md-5">
         
         <!-- Brand -->
         <a class=" navbar-brand" href="<?php echo base_url();?>">Home</a>
         
-        <ul class="d-block d-sm-block d-md-none nav">
-            <li class="text-white nav-item">
-                <i class='fas fa-phone'></i> <span></span>
-            </li>
-        </ul>
-         <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNav">
-            <span class=" navbar-toggler-icon"></span>
-        </button>
-        
-         <!-- Navbar links -->
         <div class=" collapse navbar-collapse" id="collapseNav">
             <ul class="navbar-nav ">                
                 <!--------------------About us section---------------------------------------------------------------------------------------------------------->

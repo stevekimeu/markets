@@ -60,6 +60,10 @@
       background-color:  #B22222;
       background-image: linear-gradient(315deg, #eb4511 0%, #b02e0c 74%);
     }
+    .bg-nav-top{
+      background-color:  #be9e67;
+      background-image: linear-gradient(315deg, #be9e67 0%, #be9e67 74%);
+    }
     .bg-black{
        background-color: #000000;
        background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
@@ -156,8 +160,9 @@
        font-size:1.5em;
    }
    .nav-top{
-       background-color:#B22222;
+       background-color:#be9e67;
    }
+   /* }
    .nav-topper{
        margin:0;
    }
@@ -192,7 +197,7 @@
        padding:0;
        line-height:1.5;
        text-align:center;
-   }
+   } */
    
    .nav-top>div>div>ul>li>a{
        color:white;
@@ -200,14 +205,15 @@
        padding-left:1em;
        padding-right:1em;
        padding-bottom:0.3em;
-       padding-top:0.3em;
+       padding-top:0.3em;       
+       text-align:right;
    }
     .nav-top>div>div>ul>li>a>div>a{
        color:white;
        font-size:0.8em;
    }
    .nav-top>div>div>ul>li>a:hover{
-       background-color: #b02e0c !important;
+       background-color: #be9e67 !important;
        color:white;
    }
    .logo{
@@ -303,7 +309,7 @@
 }
 .trademark{
 	min-width:100%;
-	background-color:#C8AD7F;
+	background-color: #be9e67;
 	text-align: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -311,6 +317,9 @@
 	overflow:auto;
     line-height:1.5em;
 	margin-bottom: 1%;
+}
+.footer{
+    /* background-color: #be9e67; */
 }
 /*----------------*Slider styles----------------------------------------**/
    .carousel-control-prev {

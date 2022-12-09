@@ -35,7 +35,7 @@
 
 <body >
     <!--------Loader-------------->
-    <div class= "loader spinner-border text-danger"></div>    
+    <div class= "loader spinner-border text-success"role = "status" ></div>    
     
 	<!---Navbar with links--->
 	<?php include 'includes/navbar.php';?>	
