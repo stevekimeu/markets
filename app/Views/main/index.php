@@ -41,6 +41,7 @@
 	<?php include 'includes/navbar.php';?>	
     
     <!---Load page name based on parameter handed by controller--->
+    <?php include 'home/home.php';?>	
     
     <!--Footer section ---->
     <?php include 'includes/footer.php';?>

@@ -38,14 +38,14 @@
             <div class=" row">
                 <div class="col-md-4 col-sm-4 col-12 d-flex align-items-center py-2 ">
                     <a href="<?php echo base_url();?>">
-                        <img class="img-fluid  thumbnail" src="<?php echo base_url();?>/uploads/system/logo.png" />
+                        <img class="img-fluid  thumbnail" src="<?php echo base_url();?>/uploads/system/logos.png" />
                     </a>
                 </div>
                 <div class="col-md-8 col-sm-8 col-12 row  py-2  d-none d-md-flex ">                    
                     <div class="col-md-4 d-flex justify-content-center align-items-center">
                         <div class="text-maroon navicon px-3"><i class='fas fa-money-check'></i></div>
                         <div class="text">
-                            <span>Tenders</span><br>
+                            <span>Search Bar</span><br>
                             <a class="text-maroon" href="<?php echo base_url();?>downloads/tenders">Visit Page</a>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
     
-    <link rel="icon" href="<?php echo base_url();?>uploads/system/log.png" type="image/png"/>
+    <link rel="icon" href="uploads/system/log.png" type="image/png"/>
      <!--<link rel="copyright" href="copyright.html">-->
     <link rel="canonical" href="<?php echo base_url();?>" />
     
@@ -11,14 +11,14 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="crossorigin="anonymous"></script> 
     
  <style>
 
 /***---------------General typographic styles--------------------------------**/ 
     body{
-        font-family: 'Poppins', sans-serif;
+        font-family: 'Times New Roman', sans-serif;
         font-size:0.9em;
         line-height:1.5;
     }
@@ -34,10 +34,7 @@
           left:50%;
           right:50%;
     }
-    .page-content{
-        display:none;
-       
-    }
+    
     
     .btn-maroon{
         color:white !important;
@@ -60,7 +57,7 @@
        color:#2a2a72 !important;
     }
     .bg-maroon{
-      background-color:  #B22222.;
+      background-color:  #B22222;
       background-image: linear-gradient(315deg, #eb4511 0%, #b02e0c 74%);
     }
     .bg-black{
@@ -159,7 +156,7 @@
        font-size:1.5em;
    }
    .nav-top{
-       background-color:#B22222.;
+       background-color:#B22222;
    }
    .nav-topper{
        margin:0;
@@ -276,6 +273,45 @@
     .navbar{
       padding:0;
     }
+/*----------------*Slider styles----------------------------------------**/
+.tablinks {
+  display: block;
+  background-color: #FAFAD2;
+  color: black;
+  padding: 14px 16px;
+  width: 100%;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  border:none;
+}
+.tablinks:hover {
+  background-color:  #FAFAD2;
+  color:brown;
+  font-weight: bold;
+}
+
+.tablinks.active {
+  background-color: white;
+  color:brown;
+  font-weight: bold;
+  font-size: 15px;
+  border: none important!;
+  outline: none;
+}
+.trademark{
+	min-width:100%;
+	background-color:#C8AD7F;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	overflow:auto;
+    line-height:1.5em;
+	margin-bottom: 1%;
+}
 /*----------------*Slider styles----------------------------------------**/
    .carousel-control-prev {
        margin-left:20%;
@@ -590,9 +626,7 @@
     .tc-footer .tc-footer-widget ul li a  {
         color: white !important;
     }
-    .tc-heading{
-         
-    }
+    
     /****----------------------Administration and BOG  styles-----------------------**/ 
     #administration>div>div>figure{
         font-size:20px; 
