@@ -38,7 +38,7 @@
             <div class=" row">
                 <div class="col-md-4 col-sm-4 col-12 d-flex align-items-center py-2 ">
                     <a href="<?php echo base_url();?>">
-                        <img class="img-fluid  thumbnail" src="<?php echo base_url();?>/uploads/system/logo.png" alt="<?php echo $settings['institution_long'];?>"/>
+                        <img class="img-fluid  thumbnail" src="<?php echo base_url();?>/uploads/system/logo.png" />
                     </a>
                 </div>
                 <div class="col-md-8 col-sm-8 col-12 row  py-2  d-none d-md-flex ">                    
@@ -63,7 +63,7 @@
         
         <ul class="d-block d-sm-block d-md-none nav">
             <li class="text-white nav-item">
-                <i class='fas fa-phone'></i> <span><?php echo $settings['phone'];?></span>
+                <i class='fas fa-phone'></i> <span></span>
             </li>
         </ul>
          <!-- Toggler/collapsibe Button -->
@@ -95,10 +95,10 @@
                     </ul>
                 </li>
                 <!--------------------weekly Results Sections------------------------------------------------------------------------------------------------------->
-                <a class=" navbar-brand" href="<?php echo base_url();?>">weekly Results</a> 
+                <li><a class=" navbar-brand" href="<?php echo base_url();?>">weekly Results</a> </li>
                 
                 <!--------------------Conntact Us Sections------------------------------------------------------------------------------------------------------->
-                <a class=" navbar-brand" href="<?php echo base_url();?>">Contact Us</a> 
+                <li><a class=" navbar-brand" href="<?php echo base_url();?>">Contact Us</a> </li>
                 
             </ul>
         </div>

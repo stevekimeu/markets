@@ -13,38 +13,34 @@
     <meta name="robots" content="index, follow"/>
     <meta name="url" content="<?php echo base_url();?>"/>
     <meta name="keywords" content="Tseikuru Technical Training Institute, Tseikuru TTI, Technical colleges in Mwingi, TVET institutions in Kitui County, TVET(Technical and Vocational Education Training) - Kenya"/>
-    <meta name="description" content="<?php echo $settings['institution_long'];?> was established as a TVET Institution in 2016 with the aim of offering technical and business courses to Form Four leavers." />
+    <meta name="description" content=" was established as a TVET Institution in 2016 with the aim of offering technical and business courses to Form Four leavers." />
 
     <!----------Meta tags for social media sharing---------------------------->
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Livestock Markets | Welcome" />
-    <meta property="og:description" content="<?php echo $settings['institution_long'];?> was established as a TVET Institution in 2016 with the aim of offering technical and business courses to Form Four leavers." />
+    <meta property="og:description" content=" was established as a TVET Institution in 2016 with the aim of offering technical and business courses to Form Four leavers." />
     <meta property="og:url" content="<?php echo base_url();?>" />
-    <meta property="og:site_name" content="<?php echo $settings['institution_long'];?>" />
+    <meta property="og:site_name" content="" />
     <meta property="og:image" content="<?php echo base_url();?>uploads/system/social.jpg" />
     <meta property="og:image:width" content="1920" />
     <meta property="og:image:height" content="620" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:description" content="<?php echo $settings['institution_long'];?> was established as a TVET Institution in 2016 with the aim of offering technical and business courses to Form Four leavers." />
-    <meta name="twitter:title" content="<?php echo $settings['institution_long'];?> | Welcome" />
-    <meta name="twitter:image" content="<?php echo base_url();?>uploads/system/social.jpg" />
+    <meta name="twitter:description" content=" was established as a TVET Institution in 2016 with the aim of offering technical and business courses to Form Four leavers." />
+    <meta name="twitter:title" content="Livestock Markets | Welcome" />
+    <!-- <meta name="twitter:image" content="<?php echo base_url();?>uploads/system/social.jpg" /> -->
     
     <?php include 'includes/header.php';?>
-
 </head>
 
 <body >
     <!--------Loader-------------->
-    <div class= "loader spinner-border text-danger"></div>
-    
+    <div class= "loader spinner-border text-danger"></div>    
     
 	<!---Navbar with links--->
-	<?php include 'includes/navbar.php';?>
-	
+	<?php include 'includes/navbar.php';?>	
     
     <!---Load page name based on parameter handed by controller--->
-    <?php include $page_folder.'/'.$page_name.'.php';?>
     
     <!--Footer section ---->
     <?php include 'includes/footer.php';?>
