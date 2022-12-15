@@ -43,6 +43,7 @@ $routes->get("/markets", "Home::markets");
 $routes->get("/currentinfo/blog", "Blog::blog");
 $routes->get("/contact-us", "Home::contact_us");
 $routes->match(['get', 'post'], 'home/contact', 'Home::contact');
+$routes->match(['get', 'post'], 'livestock/markets', 'Livestock::fileUpload');
 $routes->get("/selllivestock", "Livestock::sell_livestock");
 
 /*
