@@ -82,7 +82,7 @@
                                     ?>
                                         <div class="col-sm-4 card py-2">
                                             <img src="<?= session()->getFlashdata('filepath') ?>" with="40px" height="100px"><br>
-                                            <p class = "card-text text-green text-center">uploaded image</p>
+                                            <p class = "card-text text-livestock text-center">uploaded image</p>
                                         </div>
                                 <?php
                                     }else{

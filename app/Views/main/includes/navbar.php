@@ -9,7 +9,7 @@
             <div class="col-md-7 d-flex center-content-around  ">
                     <ul class="d-block d-sm-block d-md-block nav mx-3">
                             <li class="nav-item">
-                                    <a class="dropdown-item text-white " href="<?php echo base_url();?>">Buy Livestock</a>  
+                                    <a class="dropdown-item text-white " href="<?php echo base_url();?>/livestock">Buy Livestock</a>  
                             </li>
                     </ul>
                     <ul class="d-block d-sm-block d-md-block nav ">

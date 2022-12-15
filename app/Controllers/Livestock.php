@@ -76,10 +76,17 @@ class Livestock extends BaseController
                 session()->setFlashdata('alert-class', 'alert-danger');
                 echo view('main/index', $data); 
             }
-        }
-       
-     
-        
+        }      
+    }
+
+    public function animals()
+    {
+        $livestockModel = new Animal();
+        $data['livestock'] = $livestockModel->findAll();//pagination     https://www.youtube.com/watch?v=d30Cw0GSCxA
+
+        $data['page_folder']="livestock";
+        $data['page_name']="animals";
+        return view('main/index', $data);
     }
 }
    

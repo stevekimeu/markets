@@ -48,6 +48,11 @@
        font-weight: bold !important;
        text-decoration: none !important;
     }
+    .text-livestock{
+       color:#007500!important;
+       text-decoration: none !important;
+       line-height:100%;
+    }
     .text-lightorange{        
         color:#be9e67 !important; 
         font-weight: bold !important;
