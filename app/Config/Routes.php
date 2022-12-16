@@ -46,6 +46,7 @@ $routes->match(['get', 'post'], 'home/contact', 'Home::contact');
 $routes->match(['get', 'post'], 'livestock/markets', 'Livestock::fileUpload');
 $routes->get("/selllivestock", "Livestock::sell_livestock");
 $routes->get("/livestock", "Livestock::animals");
+$routes->get('/dummy', 'Livestock::uploaddummy');
 
 /*
  * --------------------------------------------------------------------

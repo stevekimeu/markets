@@ -19,4 +19,12 @@ class Animal extends Model{
 	protected $allowedFields = ['category', 'breed', 'age', 'weight', 'auctiondate', 'location', 'price', 'gender','image'];
 
 }
+class Uploaddummy extends Model{
+
+	protected $table    = 'livestock_type';
+	protected $primaryKey = 'id';
+	protected $returnType = 'array';
+	protected $allowedFields = ['id', 'path', 'name'];
+
+}
 		

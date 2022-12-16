@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
 use App\Models\Animal;
-
+use App\Models\Uploaddummy;
 class Livestock extends BaseController
 {
     
@@ -87,6 +87,18 @@ class Livestock extends BaseController
         $data['page_folder']="livestock";
         $data['page_name']="animals";
         return view('main/index', $data);
+    }
+
+    public function uploaddummy(){
+
+        $dummylivestockModel = new Uploaddummy();
+        $data['livestock_type'] = $dummylivestockModel->findAll();
+
+        $data['page_folder']="home";
+        $data['page_name']="welcome";
+
+        return view('main/index', $data);
+
     }
 }
    
