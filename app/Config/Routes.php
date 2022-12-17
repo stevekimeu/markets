@@ -37,16 +37,39 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 // $routes->get('/', 'Home::index');
 
+
+//root route
 $routes->get('/', 'Home::index');
+
+//home page
 $routes->get('/', 'Home::welcome');
+
+//markets and their days route
 $routes->get("/markets", "Home::markets");
+
+//blog route
 $routes->get("/currentinfo/blog", "Blog::blog");
+
+//contact us form
 $routes->get("/contact-us", "Home::contact_us");
+
+//conntact us controller
 $routes->match(['get', 'post'], 'home/contact', 'Home::contact');
+
+//upload livestock controller
 $routes->match(['get', 'post'], 'livestock/markets', 'Livestock::fileUpload');
+
+//form for uploading livestock
 $routes->get("/selllivestock", "Livestock::sell_livestock");
+
+//route for uploading dummy livestock on the home page
 $routes->get("/livestock", "Livestock::animals");
+
+//upload form
 $routes->get('/dummy', 'Livestock::uploaddummy');
+
+//upload controller
+$routes->match(['get', 'post'], 'livestock/dummy', 'Livestock::uploadD');
 
 /*
  * --------------------------------------------------------------------

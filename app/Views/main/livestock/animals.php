@@ -1,9 +1,12 @@
 
 <!------------- Display all animals from database----------------------->
+<php $data[
+    ''
+    ]; ?>
 <div class = "container page-box">
     <div class = "row">
         <?php foreach($livestock as $animal ):?>
-            <div class="col-md-2 card py-2 mb-3" >
+            <div class="col-md-2 card py-2 mb-3">
                 <a href="#">
                     <img class="img-fluid  thumbnail" src="<?php echo $animal['image']; ?>" width = "auto" height = "auto" alt = "Livestock image"/>
                     <p class = "text-livestock text-left my-2"><?php echo 'Kshs.'.$animal['price']; ?></p>

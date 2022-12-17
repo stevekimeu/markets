@@ -1,12 +1,12 @@
 <div class = "container page-box py-1 mb-2" id = "welcome">
 	<h3 class = "text-green title-head">Search for your Favourite Livestock</h3>
 	<div class = "row mx-2">
-		<?php foreach($livestock_type as $livestock):?>
+		<?php foreach($livestock_type as $stock):?>
 				<div class="col-md-2 card py-2 mb-3" >
                     <a href="<?php echo base_url();?>">
-                        <img class="img-fluid  thumbnail" src="<?php $livestock['path'];?>" width = "auto" height = "auto" alt = "Logo is here"/>
+                        <img class="img-fluid  thumbnail" src="<?php $stock['path'];?>" width = "auto" height = "auto" alt = "Logo is here"/>
 						<!-- <h6 class = "card-title text-lightorange text-center my-3">Cows</h6> -->
-						<p class = "card-text text-lightorange text-center"><?php $livestock['name'];?></p>
+						<p class = "card-text text-lightorange text-center"><?php $stock['name'];?></p>
                     </a>
                 </div>
 			<?php endforeach;?>

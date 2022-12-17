@@ -6,10 +6,6 @@ use App\Models\Markets;
 
 class Home extends BaseController
 {
-    // public function index()
-    // {
-    //     return view('welcome_message');
-    // }
     public function index()
     {
         $data['page_folder']="home";
@@ -21,19 +17,17 @@ class Home extends BaseController
     public function markets()
     {
         $marketModel = new Markets();
-        $data['markets'] = $marketModel->findAll();//pagination     https://www.youtube.com/watch?v=d30Cw0GSCxA
+        $data['markets'] = $marketModel->findAll();//pagination
 
         $data['page_folder']="home";
         $data['page_name']="markets";
 
         return view('main/index', $data);
     }
-
     public function contact_us(){
 
         $data['page_folder'] = "home";
         $data['page_name'] = "contact";
-
 
         return view('main/index', $data);
     }

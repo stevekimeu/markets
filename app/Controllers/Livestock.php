@@ -88,14 +88,57 @@ class Livestock extends BaseController
         $data['page_name']="animals";
         return view('main/index', $data);
     }
+    public function uploadD(){
+            // Validation
+            $rules = [
+                'name'=> 'required',
+                'path' => 'uploaded[path]|max_size[path,2000048]|ext_in[path,jpg,png,gif,jpeg,docx,pdf]',
+            ];
+                if($file = $this->request->getFile('path')) {
+                   if ($file->isValid() && ! $file->hasMoved()) {
+                      // Get file name and extension
+                      $name = $file->getName();
+                      $ext = $file->getClientExtension();
+       
+                      // Get random file name
+                      $newName = $file->getRandomName(); 
+       
+                      // Store file in public/uploads/ folder
+                      $file->move('../public/uploads/homepage', $newName);
+       
+                      // File path to display preview
+                      $filepath = base_url()."/uploads/homepage".$newName;
+                      
+                      $dummyModel = new Uploaddummy();
 
+                      $dummy = [
+                        'name' => $this->request->getPost('name'),
+                      ];
+                      $dummy['path'] = $filepath;
+
+                      $dummyModel->save($dummy);
+                      // Set Session
+                      session()->setFlashdata('message', 'Uploaded Successfully!');
+                      session()->setFlashdata('alert-class', 'alert-success');
+                      session()->setFlashdata('filepath', $filepath);
+                      session()->setFlashdata('extension', $ext);
+                      return redirect()->route('/dummy');       
+                   }else{
+                      // Set Session
+                      session()->setFlashdata('message', 'File not uploaded.');
+                      session()->setFlashdata('alert-class', 'alert-danger');
+                      return redirect()->route('/dummy');       
+                   }
+                   
+                }
+       
+            }
     public function uploaddummy(){
-
         $dummylivestockModel = new Uploaddummy();
         $data['livestock_type'] = $dummylivestockModel->findAll();
 
         $data['page_folder']="home";
-        $data['page_name']="welcome";
+        $data['page_name']="uploadForm";
 
         return view('main/index', $data);
 
