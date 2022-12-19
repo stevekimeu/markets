@@ -104,10 +104,10 @@ class Livestock extends BaseController
                       $newName = $file->getRandomName(); 
        
                       // Store file in public/uploads/ folder
-                      $file->move('../public/uploads/homepage', $newName);
+                      $file->move('../public/uploads/homepage/', $newName);
        
                       // File path to display preview
-                      $filepath = base_url()."/uploads/homepage".$newName;
+                      $filepath = base_url()."/uploads/homepage/".$newName;
                       
                       $dummyModel = new Uploaddummy();
 
@@ -122,7 +122,7 @@ class Livestock extends BaseController
                       session()->setFlashdata('alert-class', 'alert-success');
                       session()->setFlashdata('filepath', $filepath);
                       session()->setFlashdata('extension', $ext);
-                      return redirect()->route('/dummy');       
+                      return redirect()->route('/');       
                    }else{
                       // Set Session
                       session()->setFlashdata('message', 'File not uploaded.');
@@ -134,14 +134,11 @@ class Livestock extends BaseController
        
             }
     public function uploaddummy(){
-        $dummylivestockModel = new Uploaddummy();
-        $data['livestock_type'] = $dummylivestockModel->findAll();
-
         $data['page_folder']="home";
         $data['page_name']="uploadForm";
 
         return view('main/index', $data);
 
-    }
+    } 
 }
    

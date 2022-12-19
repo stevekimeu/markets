@@ -81,6 +81,7 @@
                 <a class=" navbar-brand" href="<?php echo base_url();?>">weekly Results</a>
                 <a class=" navbar-brand" href="<?php echo base_url();?>/contact-us">Contact Us</a> 
                 <a class=" navbar-brand" href="<?php echo base_url();?>/currentinfo/blog">Blog</a> 
+                <a class=" navbar-brand" href="<?php echo base_url();?>/dummy">Dummy Livestock</a>
                 
             
         </div>

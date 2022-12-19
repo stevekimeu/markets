@@ -3,21 +3,29 @@ namespace App\Controllers;
 
 use App\Models\Contact;
 use App\Models\Markets;
+use App\Models\Uploaddummy;
 
 class Home extends BaseController
 {
     public function index()
     {
+        //load from database data for markets/days
+        $marketModel = new Markets();
+        $data['markets'] = $marketModel->findAll();//pagination  
+
+        //load data for dummy images in  the homepage
+        $dummylivestockModel = new Uploaddummy();
+        $data['livestock_type'] = $dummylivestockModel->findAll();
+
         $data['page_folder']="home";
         $data['page_name']="home";
 
         return view('main/index', $data);
-    }
-            
+    }   
     public function markets()
-    {
+    {       
         $marketModel = new Markets();
-        $data['markets'] = $marketModel->findAll();//pagination
+        $data['markets'] = $marketModel->findAll();//pagination 
 
         $data['page_folder']="home";
         $data['page_name']="markets";
