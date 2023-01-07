@@ -24,6 +24,7 @@
                             <option>Domestic Cat</option>
                             <option>Horses</option>
                             <option>Livestock Feeds</option>
+                            <option>Swine</option>
                         </select>
                     </div>
                     <div class="form-group col-md-6">

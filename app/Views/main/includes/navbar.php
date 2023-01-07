@@ -57,7 +57,7 @@
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
-                <div class="input-group  col-md-2 py-2 mt-4">
+                <div class="col-md-2 py-2 mt-4">
 
 
                 </div>
@@ -78,7 +78,7 @@
                 <a class="navbar-brand" href="<?php echo base_url();?>#about">About Livestock Markets</a>
                 <a class="navbar-brand" href="<?php echo base_url();?>">Livestock Breeding</a>
                 <a class="navbar-brand" href="<?php echo base_url();?>/markets">Market Days</a>
-                <a class=" navbar-brand" href="<?php echo base_url();?>">weekly Results</a>
+                <a class=" navbar-brand" href="<?php echo base_url();?>/results">weekly Results</a>
                 <a class=" navbar-brand" href="<?php echo base_url();?>/contact-us">Contact Us</a> 
                 <a class=" navbar-brand" href="<?php echo base_url();?>/currentinfo/blog">Blog</a> 
                 <a class=" navbar-brand" href="<?php echo base_url();?>/dummy">Dummy Livestock</a>

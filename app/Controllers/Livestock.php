@@ -82,10 +82,23 @@ class Livestock extends BaseController
     public function animals()
     {
         $livestockModel = new Animal();
-        $data['livestock'] = $livestockModel->findAll();//pagination     https://www.youtube.com/watch?v=d30Cw0GSCxA
+        $livestockModels = new Uploaddummy();
+        $data['livestock'] = $livestockModel->findAll();
+        $data['livestock_type'] = $livestockModels->findAll();
 
         $data['page_folder']="livestock";
         $data['page_name']="animals";
+        return view('main/index', $data);
+    }
+    public function results()
+    {
+        $livestockModel = new Animal();
+        $livestockModels = new Uploaddummy();
+        $data['livestock'] = $livestockModel->findAll();
+        $data['livestock_type'] = $livestockModels->findAll();
+
+        $data['page_folder']="livestock";
+        $data['page_name']="results";
         return view('main/index', $data);
     }
     public function uploadD(){

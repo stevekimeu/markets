@@ -63,6 +63,9 @@ $routes->get("/selllivestock", "Livestock::sell_livestock");
 //route for uploading dummy livestock on the home page
 $routes->get("/livestock", "Livestock::animals");
 
+//route for uploading dummy livestock on the home page
+$routes->get("/results", "Livestock::results");
+
 //upload form
 $routes->get('/dummy', 'Livestock::uploaddummy');
 

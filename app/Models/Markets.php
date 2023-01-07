@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class Markets extends Model
 {
-	protected $table    = 'markets';
+	protected $table    = 'markets' ;
 	protected $primaryKey = 'S.No';
 	protected $returnType = 'array';
 	protected $allowedFields = ['name', 'location', 'day'];
@@ -27,4 +27,6 @@ class Uploaddummy extends Model{
 	protected $allowedFields = ['id', 'path', 'name'];
 
 }
+
+
 		

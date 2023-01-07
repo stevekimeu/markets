@@ -14,12 +14,13 @@ class Home extends BaseController
         $data['markets'] = $marketModel->findAll();//pagination  
 
         //load data for dummy images in  the homepage
+
         $dummylivestockModel = new Uploaddummy();
         $data['livestock_type'] = $dummylivestockModel->findAll();
+        // $datum['animals'] = $dummylivestockModel->combine();
 
         $data['page_folder']="home";
         $data['page_name']="home";
-
         return view('main/index', $data);
     }   
     public function markets()

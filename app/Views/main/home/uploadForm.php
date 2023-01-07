@@ -1,7 +1,7 @@
 
   <div class="container">
-    <div class="row-md-12">
-      <div class="col-md-12">
+    <div class="row-md-12 py-3">
+      <div class="col-md-12py-3">
         <?php 
             // Display Response
             if(session()->has('message')){
@@ -31,7 +31,7 @@
         <form method="post" action="<?=base_url('livestock/dummy')?>" enctype="multipart/form-data">
            <?= csrf_field(); ?>
            <div class="col-md-6 form-group">
-              <label for="file">File:</label>
+              <label for="file">Image:</label>
               <input type="file" class="form-control" id="path" name="path" />
                 <!-- Error -->
                 <?php if( $validation->getError('path') ) {?>
@@ -41,7 +41,7 @@
                 <?php }?>
            </div>
            <div class="col-md-6 form-group">
-              <label for="file">File Name:</label>
+              <label for="file">Image Name:</label>
               <input type="text" class="form-control" id="name" name="name" />
               <!-- Error -->
               <?php if( $validation->getError('name') ) {?>
