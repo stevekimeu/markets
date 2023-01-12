@@ -10,12 +10,9 @@ class Livestock extends BaseController
         $data['page_folder']="livestock";
         $data['page_name']="sell_livestock";
 
-		return view('main/index', $data);
+		return view('main/backend/dashboard', $data);
     }
-    public function fileUpload(){
-        
-        // $path = 'http:localhost:8080/uploads/livestock';
-        // $file = new \CodeIgniter\Files\File($path);        
+    public function fileUpload(){      
         $data['page_folder'] = "livestock";
         $data['page_name'] = "sell_livestock";
 
@@ -100,7 +97,7 @@ class Livestock extends BaseController
 
         $data['page_folder']="livestock";
         $data['page_name']="results";
-        return view('main/index', $data);
+        return view('main/backend/dashboard', $data);
     }
     public function uploadD(){
             // Validation

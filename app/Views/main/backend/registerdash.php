@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 
-    <title>Market Portal </title>
+    <title>Login</title>
     
     <!----------Meta tags/elements similar on all page---------------------------->
     <meta charset="utf-8"/>
@@ -37,10 +37,6 @@
 <body >
     <!--------Loader-------------->
     <!-- <div class= "loader spinner-border text-success" role = "status" ></div>     -->
-    
-	<!---Navbar with links--->
-	<?php include 'includes/navbar.php';?>	
-
     
     
     <!---Load page name based on parameter handed by controller--->	   

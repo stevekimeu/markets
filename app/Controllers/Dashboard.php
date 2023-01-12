@@ -17,7 +17,7 @@ class Dashboard extends BaseController
         $data['page_name']="animals";
 
         return view('main/backend/dashboard', $data);
-    }   
+    } 
 }
 
    

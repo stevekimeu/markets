@@ -43,7 +43,17 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 
 //dashboard
-$routes->get('/dashboard', 'Dashboard::portal');
+$routes->get('/dashboard/livestock', 'Dashboard::portal');
+
+
+$routes->match(['get', 'post'], 'register/signup', 'Registration::registration');
+
+$routes->match(['get', 'post'], 'register/signin', 'Registration::login');
+
+$routes->get("/signup", "Registration::register");
+
+$routes->get("/login", "Registration::signin");
+
 
 //markets and their days route
 $routes->get("/markets", "Home::markets");
@@ -61,13 +71,13 @@ $routes->match(['get', 'post'], 'home/contact', 'Home::contact');
 $routes->match(['get', 'post'], 'livestock/markets', 'Livestock::fileUpload');
 
 //form for uploading livestock
-$routes->get("/selllivestock", "Livestock::sell_livestock");
+$routes->get("/dashboard/sales", "Livestock::sell_livestock");
 
 //route for uploading dummy livestock on the home page
 $routes->get("/livestock", "Livestock::animals");
 
 //route for uploading dummy livestock on the home page
-$routes->get("/results", "Livestock::results");
+$routes->get("/dashboard/results", "Livestock::results");
 
 //upload form
 $routes->get('/dummy', 'Livestock::uploaddummy');
