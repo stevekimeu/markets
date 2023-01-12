@@ -85,6 +85,7 @@ class Livestock extends BaseController
         $livestockModels = new Uploaddummy();
         $data['livestock'] = $livestockModel->findAll();
         $data['livestock_type'] = $livestockModels->findAll();
+        // $data['delete'] = $livestockModel->delete();
 
         $data['page_folder']="livestock";
         $data['page_name']="animals";

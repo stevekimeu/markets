@@ -42,6 +42,9 @@ $routes->set404Override();
 //root route
 $routes->get('/', 'Home::index');
 
+//dashboard
+$routes->get('/dashboard', 'Dashboard::portal');
+
 //markets and their days route
 $routes->get("/markets", "Home::markets");
 
