@@ -108,6 +108,13 @@
         padding-bottom:1%;
         padding-left:1em;
    }
+   .login-page{
+        box-shadow:0 1px 4px #be9e67, 0 0 20px #be9e67;
+        border-radius:5px;
+        position:relative;
+        padding-bottom:1%;
+        padding-left:1em;
+   }
    .title-head{
         background-color:white;
         border-radius:10px 10px 10px 10px;

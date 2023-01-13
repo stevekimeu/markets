@@ -1,13 +1,13 @@
-<div class="container page-box pt-5 mt-5">
-        <div class="row justify-content-md-center">
-            <div class="col-7">
-                <h2>Register</h2>
+<div class="container  pt-5 mt-5">
+        <div class="row justify-content-center">
+            <div class="col-4 login-page">
+                <h3 class = "text-lightorange">Register</h3>
                 <?php if(isset($validation)):?>
                 <div class="alert alert-warning">
                    <?= $validation->listErrors() ?>
                 </div>
                 <?php endif;?>
-                <form action="<?php echo base_url(); ?>/Registration/registration" method="post">
+                <form action="<?php echo base_url(); ?>/register/signup" method="post">
                     <div class="form-group mb-3">
                         <input type="text" name="name" placeholder="Name" " class="form-control" >
                     </div>
@@ -27,7 +27,10 @@
                         <input type="password" name="confirmpassword" placeholder="Confirm Password" class="form-control" >
                     </div>
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-success">Signup</button>
+                        <button type="submit" class="btn btn-success form-btn">Signup</button>
+                    </div>
+                    <div class="d-grid">
+                        <p class = "text-green">Already have an Account? <a href = "<?php echo base_url();?>/login" style = "text-decoration:none;">Login here</a></p>
                     </div>
                 </form>
             </div>

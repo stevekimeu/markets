@@ -26,7 +26,7 @@ class Registration extends BaseController
         
         $rules = [
             'name'   => 'required|min_length[2]|max_length[50]',
-            'email'  => 'required|min_length[4]|max_length[100]|valid_email|is_unique[users.email]',
+            'email'  => 'required|min_length[4]|max_length[100]|valid_email|is_unique[register.email]',
             'phone'  => 'required|min_length[2]|max_length[50]',
             'password' => 'required|min_length[4]|max_length[50]',
             'address'  => 'required|min_length[2]|max_length[50]',
@@ -43,10 +43,16 @@ class Registration extends BaseController
                 'address'    => $this->request->getVar('address'),
             ];
             $register->save($data);
-            return redirect()->to('/signin');
+            $data['page_folder']="register";
+            $data['page_name']="signin";
+
+            return view('main/backend/registerdash', $data);
         }else{
             $data['validation'] = $this->validator;
-            echo view('signup', $data);
+            $data['page_folder']="register";
+            $data['page_name']="signup";
+
+            return view('main/backend/registerdash', $data);
         }
           
     }
@@ -65,21 +71,26 @@ class Registration extends BaseController
             $authenticatePassword = password_verify($password, $pass);
             if($authenticatePassword){
                 $ses_data = [
-                    'id' => $data['id'],
                     'name' => $data['name'],
                     'email' => $data['email'],
                     'isLoggedIn' => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('/dashboard');
+                return redirect()->to('/dashboard/livestock');
             
             }else{
-                $session->setFlashdata('msg', 'Password is incorrect.');
-                return redirect()->to('/signin');
+                $session->setFlashdata('msg', 'Email or Password is incorrect.');
+                $data['page_folder']="register";
+                $data['page_name']="signin";
+
+                return view('main/backend/registerdash', $data);
             }
         }else{
             $session->setFlashdata('msg', 'Email does not exist.');
-            return redirect()->to('/signin');
+            $data['page_folder']="register";
+            $data['page_name']="signin";
+
+            return view('main/backend/registerdash', $data);
         }
     }
   

@@ -43,7 +43,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 
 //dashboard
-$routes->get('/dashboard/livestock', 'Dashboard::portal');
+$routes->get('/dashboard/livestock', 'Dashboard::portal', ['filter' => 'authGuard']);
 
 
 $routes->match(['get', 'post'], 'register/signup', 'Registration::registration');

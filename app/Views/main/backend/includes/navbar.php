@@ -22,8 +22,12 @@
                     </button>
                 </div>
                 <div class="col-md-2 py-2 pt-4 mt-4">
-                <p>
-                    Logout
+                <p> Logged in as: 
+                    <?php 
+                        $session = session();
+                        $name = $session->get('name');    
+                        echo $name;
+                    ?>
                 </p>
 
                 </div>
@@ -33,20 +37,15 @@
 </div>
 <!-----------------------Main navbar----------------------------------------------------------------------------------------------------->
 <nav class=" page-content navbar navbar-expand-md bg-nav-top sticky-top">    
-    <div class="container ml-md-5 pl-md-5">
-        
-        <!-- dashboard display -->
-        <a class=" navbar-brand" href="<?php echo base_url();?>/dashboard/livestock">Buy Livestock</a>
-    
+    <div class="container ml-md-5 pl-md-5">        
+        <!-- dashboard display -->    
         <div class=" collapse navbar-collapse" id="collapseNav">
-            <ul class="navbar-nav ">                
-                <!--------------------Transaction Section----------------------------------------------------------------------------->
+            <ul class="navbar-nav ">      
+                <a class=" navbar-brand" href="<?php echo base_url();?>/dashboard/livestock">Buy Livestock</a>
                 <a class="navbar-brand" href="<?php echo base_url();?>/dashboard/livestock">Edit Livestock Details</a>
                 <a class="navbar-brand" href="<?php echo base_url();?>/dashboard/livestock">My Livestock Bidders</a>
                 <a class="navbar-brand" href="<?php echo base_url();?>/dashboard/livestock">My Bids</a>
                 <a class=" navbar-brand" href="<?php echo base_url();?>/dashboard/results">weekly Results</a>
-                
-            
-        </div>
+            </div>
     </div>
 </nav>
