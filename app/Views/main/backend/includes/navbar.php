@@ -22,7 +22,7 @@
                     </button>
                 </div>
                 <div class="col-md-2 py-2 pt-4 mt-4">
-                <p> Logged in as: 
+                <p> <a href = "<?php echo base_url();?>/logout">Logout</a>
                     <?php 
                         $session = session();
                         $name = $session->get('name');    
@@ -41,10 +41,10 @@
         <!-- dashboard display -->    
         <div class=" collapse navbar-collapse" id="collapseNav">
             <ul class="navbar-nav ">      
-                <a class=" navbar-brand" href="<?php echo base_url();?>/dashboard/livestock">Buy Livestock</a>
-                <a class="navbar-brand" href="<?php echo base_url();?>/dashboard/livestock">Edit Livestock Details</a>
-                <a class="navbar-brand" href="<?php echo base_url();?>/dashboard/livestock">My Livestock Bidders</a>
-                <a class="navbar-brand" href="<?php echo base_url();?>/dashboard/livestock">My Bids</a>
+                <a class=" navbar-brand" href="<?php echo base_url();?>/dashboard">Buy Livestock</a>
+                <a class="navbar-brand" href="<?php echo base_url();?>/dashboard">Edit Livestock Details</a>
+                <a class="navbar-brand" href="<?php echo base_url();?>/dashboard">My Livestock Bidders</a>
+                <a class="navbar-brand" href="<?php echo base_url();?>/dashboard">My Bids</a>
                 <a class=" navbar-brand" href="<?php echo base_url();?>/dashboard/results">weekly Results</a>
             </div>
     </div>

@@ -39,11 +39,11 @@ $routes->set404Override();
 
 // Homepage routes
 
-//root route
+//home route
 $routes->get('/', 'Home::index');
 
 //dashboard
-$routes->get('/dashboard/livestock', 'Dashboard::portal', ['filter' => 'authGuard']);
+$routes->get('/dashboard', 'Dashboard::portal', ['filter' => 'authGuard']);
 
 
 $routes->match(['get', 'post'], 'register/signup', 'Registration::registration');
@@ -53,6 +53,10 @@ $routes->match(['get', 'post'], 'register/signin', 'Registration::login');
 $routes->get("/signup", "Registration::register");
 
 $routes->get("/login", "Registration::signin");
+
+$routes->get("/logout", "Registration::logout");
+
+$routes->get("/delete", "Livestock::delete/$1");
 
 
 //markets and their days route

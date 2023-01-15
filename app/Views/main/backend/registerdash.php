@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 
-    <title>Login</title>
+    <title>Livestock | Login</title>
     
     <!----------Meta tags/elements similar on all page---------------------------->
     <meta charset="utf-8"/>

@@ -43,12 +43,14 @@ class Registration extends BaseController
                 'address'    => $this->request->getVar('address'),
             ];
             $register->save($data);
+            
             $data['page_folder']="register";
             $data['page_name']="signin";
 
             return view('main/backend/registerdash', $data);
         }else{
             $data['validation'] = $this->validator;
+            
             $data['page_folder']="register";
             $data['page_name']="signup";
 
@@ -76,22 +78,25 @@ class Registration extends BaseController
                     'isLoggedIn' => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('/dashboard/livestock');
+                return redirect()->to('/dashboard');
             
             }else{
                 $session->setFlashdata('msg', 'Email or Password is incorrect.');
-                $data['page_folder']="register";
-                $data['page_name']="signin";
-
-                return view('main/backend/registerdash', $data);
+                
+                return redirect()->to('/login');
             }
         }else{
             $session->setFlashdata('msg', 'Email does not exist.');
-            $data['page_folder']="register";
-            $data['page_name']="signin";
-
-            return view('main/backend/registerdash', $data);
+            
+            return redirect()->to('/login');
         }
+    }
+    public function logout()
+    {
+        $session = session();
+        $session->destroy();
+
+        return redirect()->to('/login');
     }
   
 }

@@ -10,10 +10,7 @@ class AuthGuard implements FilterInterface
     {
         if (!session()->get('isLoggedIn'))
         {            
-            $data['page_folder']="register";
-            $data['page_name']="signin";
-
-            return view('main/backend/registerdash', $data);
+            return redirect()->to('/login');
         }
     }
     

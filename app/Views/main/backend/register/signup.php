@@ -1,6 +1,6 @@
 <div class="container  pt-5 mt-5">
         <div class="row justify-content-center">
-            <div class="col-4 login-page">
+            <div class="col-5 login-page">
                 <h3 class = "text-lightorange">Register</h3>
                 <?php if(isset($validation)):?>
                 <div class="alert alert-warning">
@@ -9,10 +9,10 @@
                 <?php endif;?>
                 <form action="<?php echo base_url(); ?>/register/signup" method="post">
                     <div class="form-group mb-3">
-                        <input type="text" name="name" placeholder="Name" " class="form-control" >
+                        <input type="text" name="name" placeholder="Full Name" " class="form-control" >
                     </div>
                     <div class="form-group mb-3">
-                        <input type="email" name="email" placeholder="Email" " class="form-control" >
+                        <input type="email" name="email" placeholder="Email Address" " class="form-control" >
                     </div>
                     <div class="form-group mb-3">
                         <input type="number" name="phone" placeholder="Phone Number" class="form-control" >

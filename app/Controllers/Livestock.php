@@ -82,7 +82,7 @@ class Livestock extends BaseController
         $livestockModels = new Uploaddummy();
         $data['livestock'] = $livestockModel->findAll();
         $data['livestock_type'] = $livestockModels->findAll();
-        // $data['delete'] = $livestockModel->delete();
+        
 
         $data['page_folder']="livestock";
         $data['page_name']="animals";
@@ -144,6 +144,11 @@ class Livestock extends BaseController
                 }
        
             }
+    public function delete($id)	{
+		$productModel = new Animal();
+		$productModel->delete($id);
+		return $this->response->redirect(site_url('dashboard/results'));
+	}
     public function uploaddummy(){
         $data['page_folder']="home";
         $data['page_name']="uploadForm";
